@@ -111,7 +111,7 @@
                     <div class="flex items-center gap-2">
                         <span id="speed-lvl" class="text-cyan-400 text-xs font-bold">Lvl 1</span>
                         <button onclick="buyUpgrade('speed')" class="neon-btn-cyan px-3 py-1.5 rounded-lg text-xs font-bold uppercase">
-                            <span id="speed-cost">5</span> 🪙
+                            <span id="speed-cost">10</span> 🪙
                         </button>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                     <div class="flex items-center gap-2">
                         <span id="fire-lvl" class="text-cyan-400 text-xs font-bold">Lvl 1</span>
                         <button onclick="buyUpgrade('fireRate')" class="neon-btn-cyan px-3 py-1.5 rounded-lg text-xs font-bold uppercase">
-                            <span id="fire-cost">5</span> 🪙
+                            <span id="fire-cost">10</span> 🪙
                         </button>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
                     <div class="flex items-center gap-2">
                         <span id="shield-lvl" class="text-cyan-400 text-xs font-bold">Lvl 0</span>
                         <button onclick="buyUpgrade('startShield')" class="neon-btn-cyan px-3 py-1.5 rounded-lg text-xs font-bold uppercase">
-                            <span id="shield-cost">5</span> 🪙
+                            <span id="shield-cost">15</span> 🪙
                         </button>
                     </div>
                 </div>
@@ -300,9 +300,9 @@
 
         const skinsData = [
             { id: 'default', name: 'Cyber Interceptor', price: 0, color: '#00f3ff', accent: '#ff007f', shape: 'triangle' },
-            { id: 'phoenix', name: 'Phoenix Wing', price: 10, color: '#ff5500', accent: '#ffcc00', shape: 'sweep' },
-            { id: 'plasma', name: 'Plasma Stryker', price: 25, color: '#10b981', accent: '#3b82f6', shape: 'twin' },
-            { id: 'void', name: 'Void Reaper', price: 50, color: '#a855f7', accent: '#ec4899', shape: 'stealth' }
+            { id: 'phoenix', name: 'Phoenix Wing', price: 25, color: '#ff5500', accent: '#ffcc00', shape: 'sweep' },
+            { id: 'plasma', name: 'Plasma Stryker', price: 50, color: '#10b981', accent: '#3b82f6', shape: 'twin' },
+            { id: 'void', name: 'Void Reaper', price: 100, color: '#a855f7', accent: '#ec4899', shape: 'stealth' }
         ];
 
         let unlockedSkins = JSON.parse(localStorage.getItem('nd_unlocked_skins')) || ['default'];
@@ -311,8 +311,8 @@
         function getUpgradeCosts() {
             return {
                 speed: upgrades.speed * 5,
-                fireRate: upgrades.fireRate * 5,
-                startShield: (upgrades.startShield + 1) * 5
+                fireRate: upgrades.fireRate * 10,
+                startShield: (upgrades.startShield + 1) * 15
             };
         }
 
@@ -1143,7 +1143,7 @@
 
 <!-- Dev-Panel JavaScript Logik -->
 <script>
-    const CORRECT_PIN = "1234";
+    const CORRECT_PIN = "florian";
 
     function openDevLogin() {
         document.getElementById('dev-login-modal').style.display = 'flex';
